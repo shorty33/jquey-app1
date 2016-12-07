@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>APP</title>
+	<link rel="stylesheet" href="themes/css/brown.min.css" />
+	<link rel="stylesheet" href="themes/css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+<body>   
+    
+    
+<!-- FIRST/MAIN PAGE -->
+    <div data-role="page" id="one" data-theme="a">
+
+	<div data-role="header">
+        <h1><b>The best places to eat</b></h1>	
+        <h3><i>discounts are subject to change</i></h3>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">Welcome!</h2>
+		
+		<p align="center"><b><code>SHORTSPAN</code></b> is an app designed to help you obtain crazy discounts for the best places in your area!</p>	
+        <p align="center">More restaurants and discounts added weekly!</p>
+		
+  
+        
+
+    <br />
+    <br />	
+    
+		<p align="center">Where would you like to go?</p>
+		<p><a href="#two" data-role="button">Show Galway</a></p>
+        <p><a href="#dub" data-role="button">Show Dublin</a></p>
+        <p><a href="#lim" data-role="button">Show Limerick</a></p>
+        <p><a href="#cork" data-role="button">Show Cork</a></p>
+      
+        
+     <div id="demo" data-role="controlgroup" data-type="horizontal" align="center">
+        <h3 align="center">Win a getaway worth €3.000! </h3>
+            <p align="center"><button type="button" onclick="loadDoc()">TELL ME HOW</button></p>
+    </div>
+
+        <script>
+                function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML =
+                this.responseText;
+                }
+                };
+                xhttp.open("GET", "christmas.txt", true);
+                xhttp.send();
+                }
+        </script>
+
+	<!--	<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>-->
+	
+    </div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+
+    </div><!-- /page one -->
+
+
+
+<!-- Start of GALWAY page: #two -->
+    <div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		
+	</div><!-- /header -->
+        
+    
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>		
+		
+		
+	    
+
+	<div data-role="content" data-theme="a">	
+        <h2 align="center">Galway</h2>
+    	<p align="center">Galway is a small town with a big attitude.</p>
+        <p align="center">Find loads of locals you never knew you had!</p>
+        <p align="center">Please select on the restaurant for<b> voucher code</b></p>	
+    
+    
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#four" class="ui-btn">Display Restaurant Information</a>
+    </div><br />
+     
+        
+        
+    <div>
+        <p align="center"><img src= "images/high.png" width = 45% height=25% ></p>
+    </div>
+        <p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">The High Cafe - <code>VOUCHER</code></a></p>
+        
+        
+    <div>
+        <p align="center"><img src= "images/lane.png" width = 45% height=25% ></p>
+    </div>    
+        <p><a href="#popup1" data-role="button" data-rel="dialog" data-transition="pop">The Lane Cafe - <code>VOUCHER</code></a></p>
+        
+    <div>
+        <p align="center"><img src= "images/fat.png" width = 45% height=25% ></p>
+    </div>
+       <p><a href="#popup2" data-role="button" data-rel="dialog" data-transition="pop">Fat Freddies - <code>VOUCHER</code></a></p>
+        
+    <br/> <br/> 
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#four" class="ui-btn" data-role="button" >Display Restaurant Information</a>
+    </div><br>
+    <br/> <br/>
+        
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page two -->
+
+
+
+<!-- Start of first popup: #popup -->
+    <div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="a">
+		<h1>The High Cafe</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive a two course meal for €10.00</p>		
+        <code>HI2C10</code>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+<!-- Start of second popup: #popup1 -->
+    <div data-role="page" id="popup1">
+
+	<div data-role="header" data-theme="a">
+		<h1>The Lane Cafe</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive a sandwich, soup and a can for €7.00</p>		
+        <code>LA347</code>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+  
+
+
+
+
+<!-- Start of third popup: #popup2 -->
+    <div data-role="page" id="popup2">
+
+	<div data-role="header" data-theme="a">
+		<h1>Fat Freddies</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any pizza and a glass of wine for €12.00</p>		
+        <code>FF2412</code>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of High menu popup: #popuphigh -->
+    <div data-role="page" id="popuphigh">
+
+	<div data-role="header" data-theme="a">
+		<h1>HIGH CAFE</h1>
+        <p>This Morroccan restaurant is located in key street Galway.</p>
+	</div><!-- /header -->
+
+        
+        
+        
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/highMen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#one" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of Lane menu popup: #popuplane -->
+    <div data-role="page" id="popuplane">
+
+	<div data-role="header" data-theme="a">
+		<h1>LANE CAFE</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/laneMen.jpg" height="200%" width="80%"></p>
+		<p align="center"><a href="#one" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of FatFreddys menu popup: #popupfat -->
+    <div data-role="page" id="popupfat">
+
+	<div data-role="header" data-theme="a">
+		<h1>Fat Freddys</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/fatMenu.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#one" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of fourth page: #four -- maps/information -->
+    <div data-role="page" id="four" data-theme="a">
+
+        
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+         
+        
+	<div data-role="header">
+     
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">View their menu or find them on Google Maps!</h2>
+		<p align="center">All menu's provided are subject to change</p>	
+		
+
+
+    <div>
+        <p align="center"><img src= "images/highcafe.png" width = 25% height=25% ></p>
+    </div>
+		<h2 align="center">The High Cafe</h2>
+	<p><a href="#popuphigh" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/High+Café/@53.2716858,-9.0558634,17z/data=!3m1!4b1!4m5!3m4!1s0x485b96fada1959eb:0xb6b6286a62bcb793!8m2!3d53.2716826!4d-9.0536747" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+        
+        
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/lane2.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">The Lane Cafe</h2>
+	<p><a href="#popuplane" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/The+Lane+Cafe/@53.2711502,-9.055938,17z/data=!3m1!4b1!4m5!3m4!1s0x485b96fb271fee8f:0x83538947249973a4!8m2!3d53.271147!4d-9.0537493" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+        
+        
+        
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/fatfred.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">Fat Freddys</h2>
+        <p><a href="#popupfat" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>
+	   <p><a href="https://www.google.ie/maps/place/Fat+Freddy's+Restaurant/@53.2710272,-9.0562802,17z/data=!3m1!4b1!4m5!3m4!1s0x485b96fb21ec1d05:0x8f6c887d30e4f725!8m2!3d53.271024!4d-9.0540915" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p>
+        
+        
+    <br />
+    <br />    
+    </div>    
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>		
+		<p><a href="#two" data-role="button">Back</a></p>
+		
+	</div>
+	
+	
+	
+	<br />
+	<!-- /page four -->
+	
+	<div data-role="footer" data-theme="a" >
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+	
+
+
+
+
+<!-- Start of DUBLIN page: #dub -->
+    <div data-role="page" id="dub" data-theme="b">
+
+	<div data-role="header">
+		
+	</div><!-- /header -->
+        
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	    
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">Dublin</h2>
+		<p align="center">Dublin is Ireland's capital</p>
+        <p align="center">Explore the largest city!</p>
+        <p align="center">Please select on the restaurant for<b> voucher code</b></p>	
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#dubinfo" class="ui-btn">Display Restaurant Information</a>
+    </div><br>
+        
+    <div>
+        <p align="center"><img src= "images/chap1.png" width = 45% height=25% ></p>
+    </div>
+        <p><a href="#popupd1" data-role="button" data-rel="dialog" data-transition="pop">Chapter One - <code>VOUCHER</code></a></p>
+        
+        
+    <div>
+        <p align="center"><img src= "images/mulberry.png" width = 45% height=25% ></p>
+    </div>    
+        <p><a href="#popupd2" data-role="button" data-rel="dialog" data-transition="pop">Mulberry Garden - <code>VOUCHER</code></a></p>
+        
+    <div>
+        <p align="center"><img src= "images/dax.png" width = 45% height=25% ></p>
+    </div>
+       <p><a href="#popupd3" data-role="button" data-rel="dialog" data-transition="pop">Dax restaurant - <code>VOUCHER</code></a></p>
+        
+        
+    <br/> <br/> 
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#dubinfo" class="ui-btn">Display Restaurant Information</a>
+    </div><br>
+        
+    <br/> <br/>
+        
+        
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page two -->
+
+
+
+<!-- Start of first popup: #popup -->
+    <div data-role="page" id="popupd1">
+
+	<div data-role="header" data-theme="a">
+		<h1>Chapter One</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive a two course meal for €15.00</p>		
+        <code>CH1152</code>
+		<p><a href="#dub" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of second popup: #popupd2 -->
+    <div data-role="page" id="popupd2">
+
+	<div data-role="header" data-theme="a">
+		<h1>Mulberry Garden</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive a main course, alcoholic beverage and a dessert for €15.00</p>		
+        <code>MMAD15</code>
+		<p><a href="#dub" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+  
+
+
+
+
+<!-- Start of third popup: #popup2 -->
+    <div data-role="page" id="popupd3">
+
+	<div data-role="header" data-theme="a">
+		<h1>Dax restaurant</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any 2 courses for €10.00</p>		
+        <code>DX2C10</code>
+		<p><a href="#dub" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of Chapter One menu popup: #popupchp1 -->
+    <div data-role="page" id="popupchp1">
+
+	<div data-role="header" data-theme="a">
+		<h1>CHAPTER ONE</h1>
+        <p>This extravagant restaurant is located in Parnell Square Dublin.</p>
+	</div><!-- /header -->
+
+        
+        
+        
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/chapmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#dub" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of Mulberry Garden menu popup: #popupmul -->
+    <div data-role="page" id="popupmul">
+
+	<div data-role="header" data-theme="a">
+		<h1>MULBERRY GARDEN</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/mulmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#dub" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of Dax Restaurant menu popup: #popupdax -->
+    <div data-role="page" id="popupdax">
+
+	<div data-role="header" data-theme="a">
+		<h1>DAX RESTAURANT</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/daxmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#dub" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of Dub Info page: #dubinfo -- maps/information -->
+    <div data-role="page" id="dubinfo" data-theme="b">
+
+	<div data-role="header">
+        
+	</div><!-- /header -->
+        
+        
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+        
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">View their menu or find them on Google Maps!</h2>
+		<p align="center">All menu's provided are subject to change</p>	
+		
+
+
+    <div>
+        <p align="center"><img src= "images/chapter.png" width = 25% height=25% ></p>
+    </div>
+		<h2 align="center">Chapter One</h2>
+	<p><a href="#popupchp1" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.com/maps/place/Chapter+One+Restaurant/@53.3543319,-6.2663105,17z/data=!3m1!4b1!4m5!3m4!1s0x48670e80cf6bb36b:0x9d52daf7f4cdca6!8m2!3d53.3543319!4d-6.2641218?hl=en" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+        <!--<p><a href="http://www.chapteronerestaurant.com" data-role="button" data-rel="dialog" data-transition="pop">View their Website</a></p>-->
+        
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/mul.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">Mulberry Garden</h2>
+	<p><a href="#popupmul" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/Mulberry+Garden/@53.3226772,-6.2391017,17z/data=!3m1!4b1!4m5!3m4!1s0x48670eb7b675bb57:0x4ae99005df02262b!8m2!3d53.322674!4d-6.236913" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+        
+        
+        
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/daxx.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">Dax restaurant</h2>
+        <p><a href="#popupdax" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>
+	   <p><a href="https://www.google.ie/maps/place/Dax+Restaurant/@53.3347878,-6.2566961,17z/data=!3m1!4b1!4m5!3m4!1s0x48670ea29cebadd9:0x6eb8bdc207dc8b12!8m2!3d53.3347846!4d-6.2545074" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p>
+        
+        
+    <br />
+    <br />    
+    </div>
+    
+    
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>		
+		<p><a href="#dub" data-role="button">Back</a></p>
+		
+    </div>
+	
+	
+	
+	<br />
+        
+	
+	
+	<div data-role="footer" data-theme="a" >
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    
+    
+    
+    
+    
+    <!-- Start of LIMERICK page: #lim -->
+    <div data-role="page" id="lim" data-theme="a">
+
+	<div data-role="header">
+		
+	</div><!-- /header -->
+        
+        
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	    
+
+        
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">Limerick</h2>
+		<p align="center">Visit Munsters mid-west beauty!</p>
+        <p align="center">Explore brilliant nightlife and restaurants.</p>
+        <p align="center">Please select on the restaurant for<b> voucher code</b></p>	
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#liminfo" class="ui-btn">Display Restaurant Information</a>
+    </div><br>
+        
+    <div>
+        <p align="center"><img src= "images/fredbis.png" width = 45% height=25% ></p>
+    </div>
+        <p><a href="#popupl1" data-role="button" data-rel="dialog" data-transition="pop">Freddys Bistro - <code>VOUCHER</code></a></p>
+        
+        
+    <div>
+        <p align="center"><img src= "images/texas.png" width = 45% height=25% ></p>
+    </div>    
+        <p><a href="#popupl2" data-role="button" data-rel="dialog" data-transition="pop">Texas Steakout - <code>VOUCHER</code></a></p>
+        
+    <div>
+        <p align="center"><img src= "images/frenchtab.png" width = 45% height=25% ></p>
+    </div>
+       <p><a href="#popupl3" data-role="button" data-rel="dialog" data-transition="pop">The French table - <code>VOUCHER</code></a></p>
+        
+        
+    <br/> <br/> 
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#liminfo" class="ui-btn">Display Restaurant Information</a>
+    </div><br>
+        
+    <br/> <br/>
+        
+        
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page two -->
+
+
+
+<!-- Start of first popup: #popup -->
+    <div data-role="page" id="popupl1">
+
+	<div data-role="header" data-theme="a">
+		<h1>Freddys Bistro</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive 2 steaks and a pint each for €25.00</p>		
+        <code>FRB2SP</code>
+		<p><a href="#lim" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of second popup: #popupd2 -->
+    <div data-role="page" id="popupl2">
+
+	<div data-role="header" data-theme="a">
+		<h1>Texas Steakout</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any steak and side for €15.00</p>		
+        <code>TSTS15</code>
+		<p><a href="#lim" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+  
+
+
+
+
+<!-- Start of third popup: #popup2 -->
+    <div data-role="page" id="popupl3">
+
+	<div data-role="header" data-theme="a">
+		<h1>The French table</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any 2 courses and a glass of wine for €20.00</p>		
+        <code>TFT220</code>
+		<p><a href="#lim" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of Freddys menu popup: #popupfredm -->
+    <div data-role="page" id="popupfredm">
+
+	<div data-role="header" data-theme="a">
+		<h1>Freddys Bistro</h1>
+        <p>This extravagant restaurant is located in the heart of Limerick City.</p>
+	</div><!-- /header -->
+
+        
+        
+        
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/fredmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#lim" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of Texas menu popup: #popuptex -->
+    <div data-role="page" id="popuptex">
+
+	<div data-role="header" data-theme="a">
+		<h1>Texas Steakout</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/texmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#lim" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of French table menu popup: #popupfrench -->
+    <div data-role="page" id="popupfren">
+
+	<div data-role="header" data-theme="a">
+		<h1>The French table</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/frenchmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#lim" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of LIM Info page: #liminfo -- maps/information -->
+    <div data-role="page" id="liminfo" data-theme="a">
+
+	<div data-role="header">
+        
+	</div><!-- /header -->
+        
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	    
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">View their menu or find them on Google Maps!</h2>
+		<p align="center">All menu's provided are subject to change</p>	
+		
+
+
+    <div>
+        <p align="center"><img src= "images/fredlim.png" width = 25% height=25% ></p>
+    </div>
+		<h2 align="center">Chapter One</h2>
+	<p><a href="#popupfredm" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/Freddy's+Bistro/@52.6609305,-8.6328107,17z/data=!3m1!4b1!4m5!3m4!1s0x485b5c63f73973d3:0x27b97cf115a4106!8m2!3d52.6609273!4d-8.630622" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+       
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/tex.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">Texas Steakout</h2>
+	<p><a href="#popuptex" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/Texas+Steakout/@52.6627156,-8.6302095,17z/data=!3m1!4b1!4m5!3m4!1s0x485b5c669a714a77:0x9f02321946783196!8m2!3d52.6627124!4d-8.6280208" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+        
+        
+        
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/corn.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">The French table</h2>
+        <p><a href="#popupfren" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>
+	   <p><a href="https://www.google.ie/maps/place/The+French+Table+Restaurant+Limerick/@52.6606472,-8.6374127,17z/data=!3m1!4b1!4m5!3m4!1s0x485b5c623d940903:0x960855810c59fd32!8m2!3d52.660644!4d-8.635224" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p>
+        
+        
+    <br />
+    <br />    
+    </div>    
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>		
+		<p><a href="#lim" data-role="button">Back</a></p>
+		
+	</div>
+	
+	
+	
+	<br />
+        
+	
+	
+	<div data-role="footer" data-theme="a" >
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    
+    
+    
+    
+    
+    
+       <!-- Start of CORK page: #cork -->
+    <div data-role="page" id="cork" data-theme="b">
+
+	<div data-role="header">
+		
+	</div><!-- /header -->
+
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	    
+        
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">Cork</h2>
+		<p align="center">Visit Ulsters unique environment!</p>
+        <p align="center">Explore the south west style.</p>
+        <p align="center">Please select on the restaurant for<b> voucher code</b></p>	
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#corkinfo" class="ui-btn">Display Restaurant Information</a>
+    </div><br>
+        
+    <div>
+        <p align="center"><img src= "images/cornstore.png" width = 45% height=15% ></p>
+    </div>
+        <p><a href="#popupc1" data-role="button" data-rel="dialog" data-transition="pop">The Cornstore - <code>VOUCHER</code></a></p>
+        
+        
+    <div>
+        <p align="center"><img src= "images/greenes.png" width = 45% height=25% ></p>
+    </div>    
+        <p><a href="#popupc2" data-role="button" data-rel="dialog" data-transition="pop">Greenes restaurant - <code>VOUCHER</code></a></p>
+        
+    <div>
+        <p align="center"><img src= "images/electric.png" width = 45% height=25% ></p>
+    </div>
+       <p><a href="#popupc3" data-role="button" data-rel="dialog" data-transition="pop">Electric - <code>VOUCHER</code></a></p>
+        
+        
+    <br/> <br/> 
+         
+    <div align="center" data-role="controlgroup" data-type="horizontal">
+        <a href="#corkinfo" class="ui-btn">Display Restaurant Information</a>
+    </div><br>
+        
+    <br/> <br/>
+        
+        
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page two -->
+
+
+
+<!-- Start of first popup: #popup -->
+    <div data-role="page" id="popupc1">
+
+	<div data-role="header" data-theme="a">
+		<h1>The Cornstore</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any main course and any alcoholic beverage for €10.00.</p>		
+        <code>TCSM10</code>
+		<p><a href="#cork" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of second popup: #popupc2 -->
+    <div data-role="page" id="popupc2">
+
+	<div data-role="header" data-theme="a">
+		<h1>Greenes restaurant</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any main course and dessert for €16.00</p>		
+        <code>GRMD16</code>
+		<p><a href="#cork" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+  
+
+
+
+
+<!-- Start of third popup: #popupc3 -->
+    <div data-role="page" id="popupc3">
+
+	<div data-role="header" data-theme="a">
+		<h1>Electric</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>VOUCHER:</h2>
+		<p>With this voucher you can receive any starter and fish main course for €12.00</p>		
+        <code>ERSF12</code>
+		<p><a href="#cork" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of Cornstore menu popup: #popupcorn -->
+    <div data-role="page" id="popupcorn">
+
+	<div data-role="header" data-theme="a">
+		<h1>Cornstore</h1>
+        <p>A meaty pleasure.</p>
+	</div><!-- /header -->
+
+        
+        
+        
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/cornmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#cork" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+<!-- Start of Greenes menu popup: #popupgre -->
+    <div data-role="page" id="popupgre">
+
+	<div data-role="header" data-theme="a">
+		<h1>Greenes</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/grenmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#cork" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of Electric menu popup: #popupelec -->
+    <div data-role="page" id="popupelec">
+
+	<div data-role="header" data-theme="a">
+		<h1>Electric</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">menu:</h2>
+        <p align="center"><img src="images/elecmen.png" height="200%" width="80%"></p>
+		<p align="center"><a href="#cork" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-icon="back">Back to list</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a">
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+
+
+
+<!-- Start of CORK Info page: #corkinfo -- maps/information -->
+    <div data-role="page" id="corkinfo" data-theme="b">
+
+	<div data-role="header">
+        
+	</div><!-- /header -->
+        
+        <p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>	
+
+	<div data-role="content" data-theme="a">	
+		<h2 align="center">View their menu or find them on Google Maps!</h2>
+		<p align="center">All menu's provided are subject to change</p>	
+		
+
+
+    <div>
+        <p align="center"><img src= "images/corn.png" width = 25% height=25% ></p>
+    </div>
+		<h2 align="center">Cornstore</h2>
+	<p><a href="#popupcorn" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/The+Cornstore+Restaurant/@51.8990477,-8.4786912,17z/data=!3m1!4b1!4m5!3m4!1s0x48449010dd8d3099:0x43e382f494feca4f!8m2!3d51.8990444!4d-8.4765025" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+       
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/green.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">Greenes</h2>
+	<p><a href="#popupgre" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>	
+       <p><a href="https://www.google.ie/maps/place/Greenes+Restaurant/@51.9016853,-8.4702243,17z/data=!3m1!4b1!4m5!3m4!1s0x48435f3f7e09a2d1:0xdda5dff03c8d1ccf!8m2!3d51.901682!4d-8.4680356" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p> 
+        
+        
+        
+        
+        
+        
+        
+    <div>
+        <p align="center"><img src= "images/elec.png" width = 25% height=25%></p>
+    </div>
+		<h2 align="center">Electric</h2>
+        <p><a href="#popupelec" data-role="button" data-rel="dialog" data-transition="pop">MENU</a></p>
+	   <p><a href="https://www.google.ie/maps/place/Electric+-+Bar%2FRestaurant%2FFishBar/@51.8961543,-8.4755757,17z/data=!3m1!4b1!4m5!3m4!1s0x4844901a8892bc39:0xb0dc0733188a402c!8m2!3d51.896151!4d-8.473387" data-role="button" data-rel="dialog" data-transition="pop">Find us on Google Maps</a></p>
+        
+        
+    <br />
+    <br />    
+    </div>    
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p>		
+		<p><a href="#cork" data-role="button">Back</a></p>
+		
+	</div>
+	
+	
+	
+	<br />
+        
+	
+	
+	<div data-role="footer" data-theme="a" >
+		<h4>SHORTSPAN LTD</h4>
+	</div><!-- /footer -->
+	
+</body>
+</html>
